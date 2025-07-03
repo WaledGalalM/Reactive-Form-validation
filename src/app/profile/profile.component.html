@@ -1,0 +1,26 @@
+<!-- src/app/pages/profile/profile.component.html -->
+
+<div class="container py-5">
+  <div class="card p-4 profile-card">
+    <div class="text-center">
+      <img [src]="userDataSendAfterService.Image || 'https://via.placeholder.com/150'" class=" mb-3 profile-pic rounded-circle" width="150" height="150">
+      <h3>Waled Galal</h3>
+      <p class="text-muted">Generator</p>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+
+        <p *ngIf="userDataSendAfterService"> <strong>First Name:</strong> {{userDataSendAfterService.FirstName}}</p>
+        <p *ngIf="userDataSendAfterService"> <strong>Last Name:</strong> {{userDataSendAfterService.LastName}}</p>
+        <p *ngIf="userDataSendAfterService"> <strong>Phone:</strong>{{userDataSendAfterService.phone}} </p>
+        <p *ngIf="userDataSendAfterService"> <strong>Email:</strong> {{userDataSendAfterService.email}}</p>
+
+      </div>
+
+    </div>
+    <div class="text-end">
+      <a routerLink="/EditeProfile" class="btn btn-primary mt-3">Edit Profile</a>
+    </div>
+  </div>
+</div>

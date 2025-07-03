@@ -1,0 +1,28 @@
+/* src/app/pages/profile/profile.component.css */
+body {
+  background-color: #f7f8fc;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #eee;
+}
+
+.btn-primary {
+  background-color: #ff6b81;
+  border-color: #ff6b81;
+}
+
+.btn-primary:hover {
+  background-color: #e55b70;
+  border-color: #e55b70;
+}

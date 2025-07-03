@@ -1,0 +1,69 @@
+<div class="container py-5">
+  <!--  -->
+<div class="container py-5">
+  <!-- عرض الصورة واختيار صورة جديدة -->
+  <div class="text-center mb-3">
+    <img
+      [src]="imagePreview || 'https://via.placeholder.com/150'"
+      class="rounded-circle"
+      width="150"
+      height="150"
+      alt="profile"
+    />
+
+    <div class="mt-2">
+      <input
+        type="file"
+        (change)="onImageSelected($event)"
+        accept="image/*"
+        class="form-control"
+      />
+    </div>
+  </div>
+
+
+  <!--  -->
+  <div class="card p-4 edit-card">
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()"  >
+
+  <div class="mb-3">
+    <label class="form-label">Frist Name</label>
+    <input formControlName="FirstName" type="text" class="form-control" placeholder="First Name"
+     [ngClass]="{ 'valid-input': profileForm.get('FirstName')?.valid && profileForm.get('FirstName')?.touched }">
+         <div *ngIf="submitted && profileForm.get('FirstName')?.invalid" class="validation-error">
+    الاسم مطلوب ويجب أن يكون من 3 إلى 10 أحرف.
+  </div>
+
+
+    <label class="form-label">Last Name</label>
+    <input formControlName="LastName" type="text" class="form-control" placeholder="Last Name"
+     [ngClass]="{ 'valid-input': profileForm.get('LastName')?.valid && profileForm.get('LastName')?.touched }">
+
+  <div *ngIf="submitted && profileForm.get('LastName')?.invalid" class="validation-error">
+    الاسم الأخير مطلوب ويجب أن يكون من 3 إلى 10 أحرف.
+  </div>
+
+  </div>
+
+
+  <div class="mb-3">
+    <label class="form-label">البريد الإلكتروني</label>
+    <input formControlName="email" type="email" class="form-control" placeholder="email"
+     [ngClass]="{ 'valid-input': profileForm.get('email')?.valid && profileForm.get('email')?.touched }">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">رقم الهاتف</label>
+    <input  formControlName="phone" type="tel" class="form-control" placeholder="+20"
+     [ngClass]="{ 'valid-input': profileForm.get('phone')?.valid && profileForm.get('phone')?.touched }"
+     (keypress)="allowOnlyNumbers($event)">
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-success">حفظ </button>
+    <a routerLink="/profile" class="btn btn-secondary ms-2">رجوع</a>
+  </div>
+</form>
+
+  </div>
+</div>

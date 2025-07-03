@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+import{g as o}from"./chunk-SAM73PUM.mjs";import{a as r,b as s}from"./chunk-VVCT4QZE.mjs";var c=(()=>{class t{constructor(){this.userData={}}saveUserData(a,e){this.userData=s(r({},a),{Image:e}),console.log(this.userData,"userData Service")}getUserData(){return this.userData}static{this.\u0275fac=function(e){return new(e||t)}}static{this.\u0275prov=o({token:t,factory:t.\u0275fac,providedIn:"root"})}}return t})();export{c as a};

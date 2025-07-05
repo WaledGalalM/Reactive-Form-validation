@@ -16,7 +16,8 @@
             "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "baseHref": "./",
+            "baseHref": "/Test-Angular-app/" ,
+
             "polyfills": [
               "zone.js"
             ],
@@ -28,12 +29,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -99,6 +95,6 @@
     }
   },
   "cli": {
-    "analytics": "7d1c99ce-a305-4964-b8b1-48ac63052c34"
+    "analytics": false
   }
 }
